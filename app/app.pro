@@ -1,7 +1,8 @@
 TEMPLATE = app
-CONFIG += console
+CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0 -std=c++0x
 
 SOURCES += editor.c\
     getcrsr.c\
