@@ -4,13 +4,23 @@ language:
 before_install:
   - pip install --user cpp-coveralls
 
+
+addons:
+  sonarcloud:
+    organization: $ORGANIZATION
+
 script:
   - qmake
-  - make
-  - ./tests/tests
+  - make 
+  - ( echo "aaa aa aaaaaa" && echo "bbbbb bbbb" && echo "ccccccccc" ) > inputLONG.txt
+  - echo "Text text text text" > input1.txt
+  - echo "TestingText" > input.txt
+- ./tests/tests
 
 after_success:
   - coveralls --root . -E ".*external.*" -E ".*tests.*"
+    - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
+- sonar-scanner
 
 notifications:
   email: false
