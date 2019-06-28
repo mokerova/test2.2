@@ -6,5 +6,5 @@ CONFIG -= qt
 QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0
 
 SUBDIRS = app tests \
-
-CONFIG += ordered
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0 -std=c++0x
+CONFIG += ordered С++11
