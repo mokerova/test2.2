@@ -99,7 +99,7 @@ EXPECT_EQ(txt, nullptr);
 TEST(test13, tests)
 {
 text txt = create_text();
-load(txt, "/home/mokerova/test/lab2/gtest-master/tests/input.txt");
+load(txt, "input.txt");
 m(txt, 1, 2);
 
 EXPECT_EQ(txt->cursor->position, 1);//5
@@ -108,7 +108,7 @@ EXPECT_EQ(txt->cursor->position, 1);//5
 TEST(test14, tests)
 {
 text txt = create_text();
-load(txt, "/home/mokerova/test/lab2/gtest-master/tests/input.txt");
+load(txt, "input.txt");
 m(txt, 1, 2);
 m(txt, -1, -1);
 
@@ -120,7 +120,7 @@ EXPECT_EQ(txt->cursor->position, 1);
 TEST(test15, tests)
 {
 text txt = create_text();
-load(txt, "/home/mokerova/test/lab2/gtest-master/tests/inputLONG.txt");
+load(txt, "inputLONG.txt");
 m(txt, 1, 2);
 showrew(txt);
 EXPECT_EQ(txt->cursor->position, 1);
@@ -129,7 +129,7 @@ EXPECT_EQ(txt->cursor->position, 1);
 TEST(test17, tests)
 {
 text txt = create_text();
-load(txt, "/home/mokerova/test/lab2/gtest-master/tests/inputLONG.txt");
+load(txt, "inputLONG.txt");
 m(txt, 3, 3);
 rt(txt);
 EXPECT_EQ(txt->cursor->position, 2);
@@ -138,7 +138,7 @@ EXPECT_EQ(txt->cursor->position, 2);
 TEST(test200, tests)
 {
 text txt = create_text();
-load(txt, "/home/mokerova/test/lab2/gtest-master/tests/inputLONG.txt");
+load(txt, "inputLONG.txt");
 txt->cursor->position = 1;
 show(txt);
 EXPECT_EQ(txt->cursor->position, 1);
@@ -148,7 +148,7 @@ EXPECT_EQ(txt->cursor->position, 1);
 TEST(test18, tests)
 {
 text txt = create_text();
-load(txt, "/home/mokerova/test/lab2/gtest-master/tests/input1.txt");
+load(txt, "input1.txt");
 m(txt, 1, 2);
 mwef(txt);
 
@@ -158,7 +158,7 @@ EXPECT_EQ(txt->cursor->position, 4);
 TEST(test19, tests)
 {
 text txt = create_text();
-load(txt, "/home/mokerova/test/lab2/gtest-master/tests/input1.txt");
+load(txt, "input1.txt");
 m(txt, 1, 6);
 mwef(txt);
 
