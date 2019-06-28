@@ -1,2 +1,7 @@
+
 *.user
 build
+Makefile
+*.gcda
+*.gcno
+*.o
