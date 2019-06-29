@@ -10,6 +10,16 @@ extern "C" {
 }
 
 using namespace testing;
+TEST(deleteLines, editortests)
+{
+    text txt = create_text();
+    load(txt, "inputLONG.txt");
+    delete_line(txt, 2 );
+
+    EXPECT_EQ(txt->length, 2);
+    delete_line(txt, 1);
+    EXPECT_EQ(txt->length, 1);
+}
 
     // Объект структуры создался?
 TEST(test1, tests)
