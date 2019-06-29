@@ -6,7 +6,7 @@ before_install:
 
 addons:
   sonarcloud:
-    organization: $ORGANIZATION
+    organization:mokerova-github \
 
 script:
   - qmake
