@@ -143,6 +143,15 @@ txt->cursor->position = 1;
 show(txt);
 EXPECT_EQ(txt->cursor->position, 1);
 }
+TEST(saveError, editortests)
+{
+    text txt = create_text();
+    load(txt, "input.txt");
+
+    EXPECT_NE(txt->length, 0);
+    save(txt, "test.txt");
+    EXPECT_NE(fopen("test.txt", "r"), nullptr);
+}
 
 // Перемещение курсора в конец слова
 TEST(test18, tests)
